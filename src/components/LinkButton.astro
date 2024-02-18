@@ -1,13 +1,14 @@
 ---
 export interface Props {
   href: string;
+  target: string;
   className?: string;
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
 }
 
-const { href, className, ariaLabel, title, disabled = false } = Astro.props;
+const { href, target, className, ariaLabel, title, disabled = false } = Astro.props;
 ---
 
 {
@@ -23,6 +24,7 @@ const { href, className, ariaLabel, title, disabled = false } = Astro.props;
   ) : (
     <a
       {href}
+      target={target}
       class={`group inline-block hover:text-skin-accent ${className}`}
       aria-label={ariaLabel}
       title={title}

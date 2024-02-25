@@ -20,7 +20,7 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
 ---
 
 <Layout title={`#${tagName} | ${SITE.title}`}>
-  <Header activeNav="tags" />
+  <Header activeNav="categories" />
   <Main
     pageTitle={[`Catégorie :`, `${tagName}`]}
     titleTransition={tag}
@@ -30,7 +30,7 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}`} frontmatter={data} />
+          <Card href={`/articles/${slug}`} frontmatter={data} />
         ))
       }
     </ul>
@@ -39,10 +39,10 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/tags/${tag}${
+    prevUrl={`/categories/${tag}${
       currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""
     }`}
-    nextUrl={`/tags/${tag}/${currentPage + 1}`}
+    nextUrl={`/categories/${tag}/${currentPage + 1}`}
   />
 
   <Footer noMarginTop={totalPages > 1} />

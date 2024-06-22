@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://github.com/malothebault/blog-malo", // replace this with your deployed domain
   author: "Malo Thebault",
   desc: "Mon coin d'internet",
-  title: "Paumé et Pétillant",
+  title: "Les Questions Que J'Me Pose",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 10,

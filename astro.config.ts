@@ -30,6 +30,6 @@ export default defineConfig({
     }
   },
   scopedStyleStrategy: "where",
-  output: "server",
+  //output: "server",
   adapter: netlify()
 });
